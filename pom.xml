@@ -157,7 +157,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>alexfunk/mykotlin</repository>
+					<repository>alexfunk/my-kotlin</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
