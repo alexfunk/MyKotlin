@@ -6,7 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    uses: actions/checkout@master
     steps:
       - uses: actions/checkout@v1
       - name: Set up JDK 1.8
@@ -15,5 +15,9 @@ jobs:
           java-version: 1.8
       - name: Build with Maven
         run: mvn -B install --file pom.xml
-      - name: Push to docker hub
-        run: docker push alexfunk/my-kotlin:0.0.1-SNAPSHOT
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: alexfunk/my-kotlin:0.0.1-SNAPSHOT
+          username: alexfunk
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
