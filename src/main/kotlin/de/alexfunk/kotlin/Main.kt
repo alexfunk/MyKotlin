@@ -11,7 +11,7 @@ import org.eclipse.jetty.server.ServerConnector
 import org.eclipse.jetty.server.Server
 
 private val userUsernameMap = ConcurrentHashMap<WsContext, String>()
-private var nextUserNumber = 1 // Assign to username for next connecting user
+private var nextUserNumber = 2// Assign to username for next connecting user
 
 
 fun main() {
