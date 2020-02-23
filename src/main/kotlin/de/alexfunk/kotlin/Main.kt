@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date
-import j2html.TagCreator.*;
+import j2html.TagCreator.*
 import org.eclipse.jetty.server.ServerConnector
 import org.eclipse.jetty.server.Server
 
@@ -60,7 +60,7 @@ fun broadcastMessage(sender: String, message: String) {
 // Builds a HTML element with a sender-name, a message, and a timestamp,
 private fun createHtmlMessageFromSender(sender: String, message: String): String {
 	return article(
-		b("$sender says:"),
+		i("$sender says:"),
 		span(attrs(".timestamp"), SimpleDateFormat("HH:mm:ss").format(Date())),
 		p(message)
 	).render()
